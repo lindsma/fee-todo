@@ -32,12 +32,12 @@ $(document).ready(function() {
             var listItem = $('<li>').attr('class', itemInput);
             var article = $('<article>').attr('class', 'article').appendTo(listItem);
             var checkBtn = $('<button>').attr('class', 'check').appendTo(article);
-            var todoInput = $('<p>').attr('class', itemInput).html(itemInput).appendTo(checkBtn);
+            var todoInput = $('<p>').attr('class', itemInput).html(itemInput).appendTo(article);
             var editTodo = $('<input>').attr({
                 'type': 'edit-todo',
                 // 'value': itemInput
-            }).appendTo(todoInput);
-            var closeBtn = $('<button>').attr('class', 'delete').html('X').appendTo(editTodo);
+            }).appendTo(article);
+            var closeBtn = $('<button>').attr('class', 'delete').html('X').appendTo(article);
 
             $(listItem).appendTo('.items');
 
