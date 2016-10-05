@@ -388,11 +388,13 @@ main {
   margin: 0 auto;
   padding: 0;
   background: #fff; }
-  main article {
+  main .article {
     overflow: hidden;
     height: 50px;
     border-bottom: 1px solid rgba(223, 223, 223, 0.7);
     padding-top: 20px; }
+    main .article:hover .delete {
+      display: block; }
   main ul.items {
     list-style: none;
     padding: 0;
@@ -414,7 +416,8 @@ main {
     main ul.items input {
       float: left;
       display: none; }
-    main ul.items button.delete {
+    main ul.items .delete {
+      display: none;
       width: 30px;
       height: 30px;
       background: #fff;

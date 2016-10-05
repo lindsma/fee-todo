@@ -1,7 +1,5 @@
 // using:  objects, arrays, iterations, functions, modules,  and the DOM (using jquery to manipulate it)
 
-// Create a TODO item when the user submits the new TODO form (the box that says "What needs to be done?" in the mockup below)
-
 // Clicking on a todo item's text allows the user to edit the item inline (see image #2)
 
 // Hovering over a todo shows the red "X", and clicking on that "X" deletes the item
@@ -24,10 +22,9 @@ $(document).ready(function() {
 
     var todoObject = {
 
+        // create HTML elements
 
         createElements: function(itemInput) {
-
-          console.log(itemInput);
 
             var listItem = $('<li>').attr('class', itemInput);
             var article = $('<article>').attr('class', 'article').appendTo(listItem);
@@ -41,14 +38,13 @@ $(document).ready(function() {
 
             $(listItem).appendTo('.items');
 
-            console.log('bye');
-
         },
 
+        // get input from form
 
         getInput: function() {
 
-          var todoArray = [];
+            var todoArray = [];
 
             $('form').submit(function(event) {
 
@@ -60,6 +56,21 @@ $(document).ready(function() {
                 todoObject.createElements(itemInput);
 
             });
+
+        },
+
+        // declare event handlers
+
+        handleEvents: function() {
+
+          // hover over list item shows red X
+
+          $('.items').on('hover', '.delete', function() {
+
+            
+
+
+          });
 
         }
 
