@@ -2,8 +2,6 @@
 
 // Clicking on a todo item's text allows the user to edit the item inline (see image #2)
 
-// Hovering over a todo shows the red "X", and clicking on that "X" deletes the item
-
 // (If you want, you could add a confirmation popup to this action using confirm(...))
 
 // The incomplete item count should always be displayed in the bottom left corner (see mockup)
@@ -38,6 +36,8 @@ $(document).ready(function() {
 
             $(listItem).appendTo('.items');
 
+            this.handleEvents();
+
         },
 
         // get input from form
@@ -63,14 +63,31 @@ $(document).ready(function() {
 
         handleEvents: function() {
 
-          // hover over list item shows red X
+            // delete todo item
 
-          $('.items').on('hover', '.delete', function() {
+            $('.items').on('click', '.delete', function() {
 
-            
+                $(this).parents('.article').slideUp(function() {
+
+                    $(this).remove();
+
+                });
+
+            });
+
+            // toggle complete button
+
+            $('.items').on('click', '.check', function() {
+
+                $(this).parents('.article').slideUp(function() {
+
+                    $(this).remove();
+
+                });
+
+            });
 
 
-          });
 
         }
 
