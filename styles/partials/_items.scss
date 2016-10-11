@@ -11,7 +11,7 @@ main {
         padding-top: 20px;
 
         &:hover .delete {
-          display: block;
+            display: block;
         }
     }
 
@@ -27,7 +27,13 @@ main {
             background: #fff;
             border: 1px solid #d3d3d3;
             float: left;
+            color: #fff;
             margin-left: 5px;
+            font-size: 22px;
+
+            &.complete {
+                color: #4cbb17;
+            }
         }
 
         p {
@@ -36,11 +42,22 @@ main {
             font-size: 28px;
             color: #333333;
             font-weight: 200;
+
+            &.complete {
+              text-decoration: line-through;
+              color: #DFDFDF;
+            }
         }
 
         input {
             float: left;
             display: none;
+            height: 100%;
+            width: 90%;
+            margin-top: -20px;
+            padding: 10px 0 5px 20px;
+            font-size: 28px;
+            font-weight: 200;
         }
 
         .delete {
@@ -55,8 +72,6 @@ main {
             font-size: 23px;
             font-family: helvetica;
             font-weight: 100;
-
         }
     }
-
 }
